@@ -1,0 +1,25 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    master:
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://172.20.58.146:3306/parking?useUnicode=true&characterEncoding=UTF8&serverTimezone=UTC&useSSL=false
+    slave01:
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://172.20.58.146:3307/parking?useUnicode=true&characterEncoding=UTF8&serverTimezone=UTC&useSSL=false
+    slave02:
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://172.20.58.146:3308/parking?useUnicode=true&characterEncoding=UTF8&serverTimezone=UTC&useSSL=false
+logging:
+  level:
+    com:
+      mmg:
+        mysqlCluster:
+          mapper: debug
